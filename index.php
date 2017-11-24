@@ -1,10 +1,13 @@
 <?php
 include('Net/SSH2.php');
 
-// connect to pi e.g. mypi.ddns.net or 192.168.0.10
-$ssh = new Net_SSH2('my_pi_IP_or_URL');
-// user and password
-if (!$ssh->login('user', 'password')) {
+$url = 'my_ip_or_url';
+$user = 'user';
+$password = 'password';
+$transactions_number = 100;
+
+$ssh = new Net_SSH2($url);
+if (!$ssh->login($user, $password)) {
     exit('Login Failed');
 }
 
@@ -116,8 +119,7 @@ $temp = $ssh->exec('vcgencmd measure_temp');
               <tbody>
               <?php
                 foreach ($accounts as $akey => $avalue) {
-                  // get last 100 transactions
-                  $listtransactions = $ssh->exec('deeponiond listtransactions "'.$akey.'" 100');
+                  $listtransactions = $ssh->exec('deeponiond listtransactions "'.$akey.'" '.$transactions_number);
                   $transactions = json_decode($listtransactions);
                   foreach (array_reverse($transactions) as $transaction) {
                     echo '<tr>';
