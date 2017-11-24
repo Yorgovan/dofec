@@ -21,4 +21,4 @@ $user = 'user'; // pi - for default raspberry pi setup
 $password = 'password'; // raspberry - for default raspberry pi setup
 $transactions_number = 100; // number of transactions to display (desc)
 ```
-![screenshot](screenshot.png)
+![screenshot](https://i.imgur.com/JWDVQZo.jpg)
