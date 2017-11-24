@@ -21,4 +21,7 @@ $user = 'user'; // pi - for default raspberry pi setup
 $password = 'password'; // raspberry - for default raspberry pi setup
 $transactions_number = 100; // number of transactions to display (desc)
 ```
+### Help button
+It will display all DeepOnion commands which you can use to display data that you need
+
 ![screenshot](https://i.imgur.com/JWDVQZo.jpg)
