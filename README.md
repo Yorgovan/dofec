@@ -24,4 +24,6 @@ $transactions_number = 100; // number of transactions to display (desc)
 ### Help button
 It will display all DeepOnion commands which you can use to display data that you need
 
+### Screenshot
+
 ![screenshot](https://i.imgur.com/JWDVQZo.jpg)
